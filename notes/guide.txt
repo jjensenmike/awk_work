@@ -1,0 +1,31 @@
+Basic Program:
+
+  awk '<conditional/pattern> {<action/output>}' <input_file>
+
+awk - runs awk (or gawk if installed and configured properly) program in quotes
+<conditional/pattern> - each input line is line compared against
+{<action/output>} - action performed on each line that matches the pattern
+<input_file> - input file, data processed on line at a time
+
+Interactive program:
+
+  awk '<conditional/pattern> {<action/output>}'
+
+Run just like the program above except no file is read. Each line is processed
+after it is typed
+
+File Program:
+ 
+  awk -f <program_file> <input_file>
+
+Reads awk program from file, processes each optional input file
+
+<conditionals/patterns> are optional for all programs. If left off the program,
+  each line is processed by the <action/output> section
+<input_file> is optional and can included multiple files. If empty, program is
+  run with an empty input and allows user to enter line values from the terminal
+  If multiple files are provided, processes files in order, on after the other
+
+Output can be piped to other programs, such as sort:
+
+  awk -f <program_file> <input_file> | sort
