@@ -4,7 +4,7 @@
 #    program is run. BEGIN acts before the first line of the first file is
 #    read and END acts after the last line of the last file has been processed
 #
-#  To Run: awk -f begin_end.awk
+#  To Run: awk -f begin_end.awk ex.data
 #  Input:  example data with people, pay rate, and hours worked
 #  Output: Table of people, rate, and hours worked with header and total hours
 
